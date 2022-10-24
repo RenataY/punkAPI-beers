@@ -1,0 +1,12 @@
+.search-box {
+    display: flex;
+    flex-direction: column;
+    &__label {
+        color: #3b6064;
+        font-weight: bold;
+    }
+    &__input {
+      border-radius: 5px;  
+      padding: 5px;
+    }
+}
