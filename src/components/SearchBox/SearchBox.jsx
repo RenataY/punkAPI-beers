@@ -4,7 +4,7 @@ import "./SearchBox.scss"
 const SearchBox = (props) => {
   const {label, searchTerm, handleInput} = props;  
   return (
-    <form className="search-box">
+    <form className="search-box" name="form">
         <label htmlFor={label} className="search-box__label">{label}</label>
         <input 
             type="text"

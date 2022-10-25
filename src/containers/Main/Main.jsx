@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from 'react'
 import './Main.scss'
 import BeerCards from '../../components/BeerCards/BeerCards'
-import beers from '../../data/beers'
-//import BeersContainer from '../../containers/BeersContainer/BeersContainer'
+
 
 const Main = (props) => {
   const {searchTerm, abvChecked, phChecked, classicRangeChecked}=props;
   const [beerArr, setBeerArr] = useState([]);
-  const url = "https://api.punkapi.com/v2/beers"
+  //const url = "https://api.punkapi.com/v2/beers"
+  const url = "https://api.punkapi.com/v2/beers?page=2&per_page=80"
   
   useEffect(()=>{
     getBeers();
   },[]);
+  
   const cleanBeer = (beer) => {
     return {
       id: beer.id,
