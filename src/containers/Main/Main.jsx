@@ -24,14 +24,18 @@ const Main = (props) => {
       ph: beer.ph
     }
   }
+    
   const getBeers = async () => {
     let res=await fetch(url);
     const data = await res.json();
-    console.log(data);
+    //console.log(data);
+    //console.log(data.length);
+    
     // clean the data!
     const newBeers = data.map((beer) => cleanBeer(beer));
     setBeerArr(newBeers);
   }
+  
   
   const filteredBeerArr = beerArr.filter((beer) => {
     const beerNameLowCase = beer.name.toLowerCase();

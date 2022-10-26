@@ -8,6 +8,7 @@ const SearchBox = (props) => {
         <label htmlFor={label} className="search-box__label">{label}</label>
         <input 
             type="text"
+            aria-label = "searchbox"
             name={label}
             value={searchTerm}
             onInput={handleInput}
